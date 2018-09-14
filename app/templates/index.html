@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+    <div class="topnav">
+        <a class="active" href="{{ url_for('index') }}">Home</a>
+		<a href="{{ url_for('login') }}">Login</a>
+    </div>
+
+    <h1>User: {{ user.username }}</h1>
+{% endblock %}
