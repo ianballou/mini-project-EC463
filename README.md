@@ -12,6 +12,8 @@ Spring information: https://github.com/ianballou/mini-project-EC463/projects/1
 6) run `pip install flask-wtf`
 7) run `pip install flask-sqlalchemy`
 8) run `pip install flask-migrate`
-9) run `flask db init`
-10) run `pip install flask-login`
-11) start the site by running `flask run`
+9) run `pip install matplotlib`
+10) Install python-tkinter: `<apt-get/yum/dnf/etc.> install python-tkinter`
+11) run `flask db init`
+12) run `pip install flask-login`
+13) start the site by running `flask run`
