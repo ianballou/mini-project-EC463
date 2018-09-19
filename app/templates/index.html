@@ -8,6 +8,39 @@
     </div>
 
     <h1>User: {{ current_user.username }}</h1>
-	<img src="static/images/tGraph.png" alt="Temperature Graph">
-	<img src="static/images/hGraph.png" alt="Humidity Graph">
+	<div id="imgcontainer">
+		<section id="png">
+		</section>
+	</div>
+	<script type="text/javascript">
+	var pngcontainer = document.getElementById('png');
+
+	var files = {
+		'png': 2
+	};
+
+	var files2 = {
+		'png': 3
+	};
+
+	for (var pngext in files) {
+  		for (var j = 0; j < files[pngext]; j++) {
+    		var pngsrc = "static/images/tGraph" + (j) + "." + pngext;
+    		var pngimg = new Image();
+    		pngimg.src = pngsrc;
+   			pngcontainer.appendChild(pngimg);
+  		}
+	}	
+
+	for (var pngext in files2) {
+  		for (var j = 0; j < files2[pngext]; j++) {
+    		var pngsrc = "static/images/hGraph" + (j) + "." + pngext;
+    		var pngimg = new Image();
+    		pngimg.src = pngsrc;
+   			pngcontainer.appendChild(pngimg);
+  		}
+	}	
+	</script>
+	<!-- <img src="static/images/tGraph.png" alt="Temperature Graph"> -->
+	<!-- <img src="static/images/hGraph.png" alt="Humidity Graph"> -->
 {% endblock %}

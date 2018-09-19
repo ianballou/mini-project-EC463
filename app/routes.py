@@ -12,10 +12,8 @@ import matplotlib.pyplot as plt
 @login_required
 def index():
     # create image file local to server
-    temps = temperature()
-    humidities = humidity()
-    tGraph(temps)
-    hGraph(humidities)
+    tGraph(current_user.temp_sensors)
+    hGraph(current_user.humid_sensors)
     return render_template('index.html', title='Home')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -26,6 +24,8 @@ def register():
     if form.validate_on_submit():
         user = User(username=form.username.data, email=form.email.data)
         user.set_password(form.password.data)
+        user.set_temp_sensors(form.tempsensors.data)
+        user.set_humid_sensors(form.humidsensors.data)
         db.session.add(user)
         db.session.commit()
         flash('Registered!')
@@ -66,19 +66,21 @@ def humidity():
     return humidity
 
 # generates temperature graph in local folder
-def tGraph(t):
-    plt.clf()
-    time = list(range(24))
-    plt.plot(time, t, color="blue")
-    plt.xlabel('Time interval / hour')
-    plt.ylabel('Temperature / F')
-    plt.savefig('app/static/images/tGraph.png')
+def tGraph(times):
+    for i in range(times):
+        plt.clf()
+        time = list(range(24))
+        plt.plot(time, temperature(), color="blue")
+        plt.xlabel('Time interval / hour')
+        plt.ylabel('Temperature / F')
+        plt.savefig('app/static/images/tGraph%d.png' % i)
 
 # generates humidity graph in local folder
-def hGraph(h):
-    plt.clf()
-    time = list(range(24))
-    plt.plot(time, h, color="orange")
-    plt.xlabel('Time interval / hour')
-    plt.ylabel('Humidity / %')
-    plt.savefig('app/static/images/hGraph.png')
+def hGraph(times):
+    for i in range(times):
+        plt.clf()
+        time = list(range(24))
+        plt.plot(time, humidity(), color="orange")
+        plt.xlabel('Time interval / hour')
+        plt.ylabel('Humidity / %')
+        plt.savefig('app/static/images/hGraph%d.png' % i)
