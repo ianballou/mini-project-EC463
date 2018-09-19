@@ -1,5 +1,7 @@
 # mini-project-EC463
 
+Spring information: https://github.com/ianballou/mini-project-EC463/projects/1
+
 # Steps to run:
 
 1) cd into the root directory of this project
