@@ -4,11 +4,18 @@ from app.forms import LoginForm, RegistrationForm
 from app.models import User
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
+from random import randint
+import matplotlib.pyplot as plt
 
 @app.route('/')
 @app.route('/index')
 @login_required
 def index():
+    # create image file local to server
+    temps = temperature()
+    humidities = humidity()
+    tGraph(temps)
+    hGraph(humidities)
     return render_template('index.html', title='Home')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -21,7 +28,7 @@ def register():
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
-        flash('Congratulations, you are now a registered user!')
+        flash('Registered!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
@@ -47,3 +54,31 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+# function that generates 24 random temperature
+def temperature():
+    temperature = [randint(20, 100) for i in range(24)]
+    return temperature
+
+# function that generates 24 random humidity
+def humidity():
+    humidity = [randint(30, 60) for i in range(24)]
+    return humidity
+
+# generates temperature graph in local folder
+def tGraph(t):
+    plt.clf()
+    time = list(range(24))
+    plt.plot(time, t, color="blue")
+    plt.xlabel('Time interval / hour')
+    plt.ylabel('Temperature / F')
+    plt.savefig('app/static/images/tGraph.png')
+
+# generates humidity graph in local folder
+def hGraph(h):
+    plt.clf()
+    time = list(range(24))
+    plt.plot(time, h, color="orange")
+    plt.xlabel('Time interval / hour')
+    plt.ylabel('Humidity / %')
+    plt.savefig('app/static/images/hGraph.png')
