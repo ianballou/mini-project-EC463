@@ -13,4 +13,5 @@ dist
 /.cache
 .eggs/
 .pytest_cache
-.png
+*.png
+.flaskenv
