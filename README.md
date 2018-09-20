@@ -12,8 +12,6 @@ C compiler, general development tools installed, Python
 - install `python-virtualenv`
 - run `virtualenv .venv`
 - run `source .venv/bin/activate`
-- create `~/.config/matplotlib/matplotlibrc`
-- run `echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc`
 - run `pip install flask`
 - run `FLASK_APP=miniproject.py`
 - run `pip install flask-wtf`
@@ -22,6 +20,8 @@ C compiler, general development tools installed, Python
 - run `pip install flask-login`
 - run `pip install flask-login`
 - run `pip install matplotlib`
+- create `~/.config/matplotlib/matplotlibrc`
+- run `echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc`
 - Install the python tkinter library
 - run `flask db upgrade`
 - start the site by running `flask run`
