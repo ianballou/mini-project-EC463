@@ -40,4 +40,10 @@ C compiler, general development tools installed, Python
 
 # Contributors
 - Ian Ballou (https://github.com/ianballou)
+-    Front-end
+-    API design
+-    Database layout
 - Lin Ma (https://github.com/lynnbgm)
+-    Sensor simulation
+-    Application workflow architecture
+-    Database research
