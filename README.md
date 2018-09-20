@@ -2,18 +2,24 @@
 
 Spring information: https://github.com/ianballou/mini-project-EC463/projects/1
 
+# Pre-requirements
+
+C compiler, general development tools installed, Python
+
 # Steps to run:
 
-1) cd into the root directory of this project
-2) run `virtualenv .venv`
-3) run `source .venv/bin/activate`
-4) run `pip install flask`
-5) run `FLASK_APP=miniproject.py`
-6) run `pip install flask-wtf`
-7) run `pip install flask-sqlalchemy`
-8) run `pip install flask-migrate`
-9) run `pip install matplotlib`
-10) Install python-tkinter: `<apt-get/yum/dnf/etc.> install python-tkinter`
-11) run `flask db init`
-12) run `pip install flask-login`
-13) start the site by running `flask run`
+- cd into the root directory of this project
+- install `python-virtualenv`
+- run `virtualenv .venv`
+- run `source .venv/bin/activate`
+- run `pip install flask`
+- run `FLASK_APP=miniproject.py`
+- run `pip install flask-wtf`
+- run `pip install flask-sqlalchemy`
+- run `pip install flask-migrate`
+- run `pip install flask-login`
+- run `pip install matplotlib`
+- Install the python tkinter library
+- run `flask db init`
+- run `pip install flask-login`
+- start the site by running `flask run`
