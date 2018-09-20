@@ -24,4 +24,4 @@ C compiler, general development tools installed, Python
 - run `echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc`
 - Install the python tkinter library
 - run `flask db upgrade`
-- start the site by running `flask run`
+- start the site by running `flask run --host=0.0.0.0`
