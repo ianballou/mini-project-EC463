@@ -21,6 +21,5 @@ C compiler, general development tools installed, Python
 - run `pip install flask-login`
 - run `pip install matplotlib`
 - Install the python tkinter library
-- run `flask run` to initialize the db then Ctrl-C to exit
 - run `flask db upgrade`
 - start the site by running `flask run`
