@@ -25,7 +25,8 @@
 
 	for (var pngext in files) {
   		for (var j = 0; j < files[pngext]; j++) {
-    		var pngsrc = "static/images/tGraph" + (j) + "." + pngext;
+    		var pngsrc = "static/images/tGraph" +
+				'{{ current_user.username }}' + (j) + "." + pngext;
     		var pngimg = new Image();
     		pngimg.src = pngsrc;
    			pngcontainer.appendChild(pngimg);
@@ -34,7 +35,8 @@
 
 	for (var pngext in files2) {
   		for (var j = 0; j < files2[pngext]; j++) {
-    		var pngsrc = "static/images/hGraph" + (j) + "." + pngext;
+    		var pngsrc = "static/images/hGraph" +
+				"{{ current_user.username }}" + (j) + "." + pngext;
     		var pngimg = new Image();
     		pngimg.src = pngsrc;
    			pngcontainer.appendChild(pngimg);

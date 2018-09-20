@@ -6,6 +6,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
 from random import randint
 import matplotlib.pyplot as plt
+import matplotlib
 
 @app.route('/')
 @app.route('/index')
@@ -67,16 +68,19 @@ def humidity():
 
 # generates temperature graph in local folder
 def tGraph(times):
+    matplotlib.use('Agg')
     for i in range(times):
         plt.clf()
         time = list(range(24))
         plt.plot(time, temperature(), color="blue")
         plt.xlabel('Time interval / hour')
         plt.ylabel('Temperature / F')
-        plt.savefig('app/static/images/tGraph%d.png' % i)
+        path = 'app/static/images/tGraph' + current_user.username + `i`
+        plt.savefig(path)
 
 # generates humidity graph in local folder
 def hGraph(times):
+    matplotlib.use('Agg')
     for i in range(times):
         plt.clf()
         time = list(range(24))
@@ -84,3 +88,5 @@ def hGraph(times):
         plt.xlabel('Time interval / hour')
         plt.ylabel('Humidity / %')
         plt.savefig('app/static/images/hGraph%d.png' % i)
+        path = 'app/static/images/hGraph' + current_user.username + `i`
+        plt.savefig(path)
