@@ -12,7 +12,7 @@ C compiler, general development tools installed, Python
 - install `python-virtualenv`
 - run `virtualenv .venv`
 - run `source .venv/bin/activate`
-- create `echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc`
+- create `~/.config/matplotlib/matplotlibrc`
 - run `echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc`
 - run `pip install flask`
 - run `FLASK_APP=miniproject.py`
