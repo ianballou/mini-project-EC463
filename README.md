@@ -1,6 +1,7 @@
 # mini-project-EC463
 
-Spring information: https://github.com/ianballou/mini-project-EC463/projects/1
+Sprint information: https://github.com/ianballou/mini-project-EC463/projects/1
+Demo website: http://128.31.26.87:5000
 
 # Pre-requirements
 
@@ -22,6 +23,16 @@ C compiler, general development tools installed, Python
 - run `pip install matplotlib`
 - create `~/.config/matplotlib/matplotlibrc`
 - run `echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc`
-- Install the python tkinter library
+- Install the python tkinter library with a package manager: `apt-get`, `yum`, `dnf`, etc
 - run `flask db upgrade`
-- start the site by running `flask run`
+- start the site by running `flask run --host=0.0.0.0`
+
+# Design choices:
+- Web framework: Python Flask<br>
+- Database management: SQLAlchemy<br>
+- Authentication: Database username/email/password<br>
+- Sensor simulation: Upon logging in and loading a user's homepage, sensor data is randomly (but realistically) generated and plotted.<br>
+
+# Workflow
+1) Register with username, email, password, and # of sensors.
+2) View graphs of sensor data on personal homepage.
