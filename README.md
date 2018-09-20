@@ -32,6 +32,7 @@ C compiler, general development tools installed, Python
 - Database management: SQLAlchemy<br>
 - Authentication: Database username/email/password<br>
 - Sensor simulation: Upon logging in and loading a user's homepage, sensor data is randomly (but realistically) generated and plotted.<br>
+- Plot display: Plots are generated as PNG files using the Python PyPlot library.  These files are numbered and named based on their graph types and related users.  They are then rendered in a user's homepage.
 
 # Workflow
 1) Register with username, email, password, and # of sensors.
