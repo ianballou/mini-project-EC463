@@ -1,6 +1,6 @@
 # mini-project-EC463
 
-Spring information: https://github.com/ianballou/mini-project-EC463/projects/1
+Sprint information: https://github.com/ianballou/mini-project-EC463/projects/1
 
 # Pre-requirements
 
