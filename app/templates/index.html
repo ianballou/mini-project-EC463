@@ -16,11 +16,11 @@
 	var pngcontainer = document.getElementById('png');
 
 	var files = {
-		'png': 2
+		'png': {{ current_user.temp_sensors }}
 	};
 
 	var files2 = {
-		'png': 3
+		'png': {{ current_user.humid_sensors }}
 	};
 
 	for (var pngext in files) {
