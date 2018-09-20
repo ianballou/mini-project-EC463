@@ -37,3 +37,7 @@ C compiler, general development tools installed, Python
 # Workflow
 1) Register with username, email, password, and # of sensors.
 2) View graphs of sensor data on personal homepage.
+
+# Contributors
+- Ian Ballou (https://github.com/ianballou)
+- Lin Ma (https://github.com/lynnbgm)
