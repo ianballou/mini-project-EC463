@@ -14,7 +14,7 @@ C compiler, general development tools installed, Python
 - Run `virtualenv .venv`
 - Run `source .venv/bin/activate`
 - Run `pip install flask`
-- Run `FLASK_APP=miniproject.py`
+- Run `export FLASK_APP=miniproject.py`
 - Run `pip install flask-wtf`
 - Run `pip install flask-sqlalchemy`
 - Run `pip install flask-migrate`
