@@ -9,23 +9,23 @@ C compiler, general development tools installed, Python
 
 # Steps to run:
 
-- cd into the root directory of this project
-- install `python-virtualenv`
-- run `virtualenv .venv`
-- run `source .venv/bin/activate`
-- run `pip install flask`
-- run `FLASK_APP=miniproject.py`
-- run `pip install flask-wtf`
-- run `pip install flask-sqlalchemy`
-- run `pip install flask-migrate`
-- run `pip install flask-login`
-- run `pip install flask-login`
-- run `pip install matplotlib`
-- create `~/.config/matplotlib/matplotlibrc`
-- run `echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc`
+- `cd` into the root directory of this project
+- Install `python-virtualenv`
+- Run `virtualenv .venv`
+- Run `source .venv/bin/activate`
+- Run `pip install flask`
+- Run `FLASK_APP=miniproject.py`
+- Run `pip install flask-wtf`
+- Run `pip install flask-sqlalchemy`
+- Run `pip install flask-migrate`
+- Run `pip install flask-login`
+- Run `pip install flask-login`
+- Run `pip install matplotlib`
+- Create `~/.config/matplotlib/matplotlibrc`
+- Run `echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc`
 - Install the python tkinter library with a package manager: `apt-get`, `yum`, `dnf`, etc
-- run `flask db upgrade`
-- start the site by running `flask run --host=0.0.0.0`
+- Run `flask db upgrade`
+- Start the site by running `flask run --host=0.0.0.0`
 
 # Design choices:
 - Web framework: Python Flask<br>
