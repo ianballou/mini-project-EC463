@@ -49,3 +49,6 @@ C compiler, general development tools installed, Python
   - Sensor data display design & implementation
   - Application workflow architecture
   - Database research
+  
+  # Acknowledgements
+  The Flask Mega-Tutorial (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
