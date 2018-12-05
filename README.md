@@ -1,7 +1,7 @@
 # mini-project-EC463
 
 Sprint information: https://github.com/ianballou/mini-project-EC463/projects/1<br>
-Demo website: http://128.31.26.87:5000
+Demo website: http://128.31.24.130:5000
 
 # Pre-requirements
 
